@@ -9,7 +9,7 @@
 #include <fstream>
 #include <string>
 
-fr_t* read_constants_from_file(const int arity) {
+static fr_t* read_constants_from_file(const int arity) {
   std::ifstream file(std::string("poseidon-constants/constants_") +
                      std::to_string(arity), std::ios::binary | std::ios::ate);
   assert(file.is_open());
